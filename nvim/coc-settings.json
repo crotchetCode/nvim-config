@@ -2,6 +2,13 @@
   "coc.preferences.hoverTarget": "float",
   "coc.preferences.currentFunctionSymbolAutoUpdate": true,
   "coc.preferences.formatOnType": false,
+  "coc.preferences.formatOnSaveFiletypes": [
+    "javascript",
+    "typescript",
+    "typescriptreact",
+    "javascriptreact",
+    "typescript.tsx"
+  ],
   "coc.preferences.bracketEnterImprove": true,
   "coc.preferences.rootPatterns": [
     "vue.config.js",

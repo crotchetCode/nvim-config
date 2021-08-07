@@ -183,6 +183,11 @@
   " highlight text color, default #000000
   autocmd ColorScheme * highlight! CocHighlightText guibg=#909399 ctermbg=023
 
+  " coc.nvim - multi-cursors
+  command! -nargs=0 RenameCurrentWord :CocCommand document.renameCurrentWord
+  nmap <silent> <C-x> :CocCommand document.renameCurrentWord<CR>
+  nmap <silent> <C-s> <Plug>(coc-cursors-word)
+
   " coc.nvim - prettier
   command! -nargs=0 Prettier :CocCommand prettier.formatFile
   nmap <leader>p :Prettier<CR>
@@ -346,6 +351,21 @@
   let g:webdevicons_conceal_nerdtree_brackets = 1
   let g:WebDevIconsNerdTreeAfterGlyphPadding = ' '
   let g:WebDevIconsNerdTreeGitPluginForceVAlign = 0
+" }
+"
+" Plugin Xuyuanp/nerdtree-git-plugin {
+  let g:NERDTreeGitStatusIndicatorMapCustom = {
+                \ 'Modified'  :'✹',
+                \ 'Staged'    :'✚',
+                \ 'Untracked' :'✭',
+                \ 'Renamed'   :'➜',
+                \ 'Unmerged'  :'═',
+                \ 'Deleted'   :'✖',
+                \ 'Dirty'     :'✗',
+                \ 'Ignored'   :'☒',
+                \ 'Clean'     :'✔︎',
+                \ 'Unknown'   :'?',
+                \ }
 " }
 
 " Plugin nerdcommenter }

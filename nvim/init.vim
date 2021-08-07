@@ -34,6 +34,7 @@ Plug 'morhetz/gruvbox'
 " Plug 'ayu-theme/ayu-vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'dense-analysis/ale'
+Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'Yggdroot/indentLine'
 " Plug 'nathanaelkane/vim-indent-guides'
 Plug 'wfxr/minimap.vim', { 'on': [] }
