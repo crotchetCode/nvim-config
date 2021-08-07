@@ -1,0 +1,90 @@
+{
+  "coc.preferences.hoverTarget": "float",
+  "coc.preferences.currentFunctionSymbolAutoUpdate": true,
+  "coc.preferences.formatOnType": false,
+  "coc.preferences.bracketEnterImprove": true,
+  "coc.preferences.rootPatterns": [
+    "vue.config.js",
+    ".git"
+  ],
+  "list.previewSplitRight": true,
+  "list.normalMappings": {
+    "<C-j>": "normal:j",
+    "<C-k>": "normal:k",
+    "<C-t>": "action:tabe"
+  },
+  "javascript.suggestionActions.enabled": false,
+  "css.validate": false,
+  "less.validate": false,
+  "scss.validate": false,
+  "wxss.validate": false,
+  "diagnostic.refreshOnInsertMode": false,
+  "diagnostic.checkCurrentLine": true,
+  "diagnostic.virtualTextPrefix": " ",
+  "diagnostic.virtualText": false,
+  "codeLens.enable": false,
+  "codeLens.separator": "‣",
+  // make vim select first item on completion
+  "suggest.noselect": false,
+  // when snippet activated and pumvisible, prefer complete completion.
+  "suggest.preferCompleteThanJumpPlaceholder": true,
+  "suggest.minTriggerInputLength": 2,
+  "suggest.acceptSuggestionOnCommitCharacter": false,
+  "suggest.snippetIndicator": "~",
+  "suggest.completionItemKindLabels": {
+    "color": "",
+    "class": "",
+    "constant": "",
+    "enum": "",
+    "enumMember": "",
+    "event": "鬒",
+    "field": "綠",
+    "folder": "",
+    "function": "",
+    "file": "",
+    "interface": "禍",
+    "module": "",
+    "method": "",
+    "operator": "洛",
+    "property": "襁",
+    "keyword": "",
+    "reference": "",
+    "snippet": "",
+    "struct": "פּ",
+    "text": "",
+    "typeParameter": "",
+    "unit": "",
+    "variable": "",
+    "value": "",
+    "default": ""
+	},
+  "snippets.extends": {
+    "vue": ["javascript", "typescript", "html", "css", "scss", "less"]
+  },
+  // coc-prettier
+  "prettier.eslintIntegration": true,
+  "prettier.tslintIntegration": false,
+  "prettier.stylelintIntegration": true,
+  // coc-git  
+  "git.branchCharacter": "",
+  "git.changedDecorator": "*",
+  "git.conflictedDecorator": "",
+  "git.stagedDecorator": "",
+  "git.untrackedDecorator": "",
+  "git.virtualTextPrefix": "     ",
+  "git.addGBlameToVirtualText": true,
+  "git.addGBlameToBufferVar": true,
+  // vetur
+  "vetur.useWorkspaceDependencies": true,
+  "vetur.validation.template": false,
+  "vetur.experimental.templateInterpolationService": true,
+  // languageserver
+  "languageserver": {
+    "bash": {
+      "command": "bash-language-server",
+      "args": ["start"],
+      "filetypes": ["sh"],
+      "ignoredRootPaths": ["~"]
+    }
+  }
+}
