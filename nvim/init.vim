@@ -56,7 +56,7 @@ Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plug 'heavenshell/vim-jsdoc', {'for': ['javascript', 'javascript.jsx','typescript'], 'do': 'make install'}
 Plug 'Yggdroot/LeaderF', {'do': './install.sh'}
 Plug 'luochen1990/rainbow'
-Plug 'rust-lang/rust.vim'
+" Plug 'rust-lang/rust.vim'
 Plug 'dart-lang/dart-vim-plugin'
 Plug 'thosakwe/vim-flutter'
 
@@ -70,7 +70,7 @@ let g:coc_global_extensions = [
         \ 'coc-vimlsp', 'coc-tsserver', 'coc-vetur', 'coc-html', 'coc-css', 'coc-json', 'coc-yaml', 'coc-flutter',
         \ 'coc-prettier', 'coc-jest',
         \ 'coc-stylelintplus',
-        \ 'coc-snippets',
+        \ 'coc-snippets', 'coc-rust-analyzer',
         \ 'https://github.com/xabikos/vscode-javascript',
         \ 'coc-translator',
         \]

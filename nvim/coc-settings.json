@@ -5,6 +5,7 @@
   "coc.preferences.formatOnSaveFiletypes": [
     "javascript",
     "typescript",
+    "rust",
     "typescriptreact",
     "javascriptreact",
     "typescript.tsx"
