@@ -22,7 +22,7 @@
     endif
 
     " 当打开缓冲区的时候，自动切换目录 
-    autocmd BufEnter * if bufname("") !~ "^\[A-Za-z0-9\]*://" | lcd %:p:h | endif
+    " autocmd BufEnter * if bufname("") !~ "^\[A-Za-z0-9\]*://" | lcd %:p:h | endif
     set shortmess+=filmnrxoOtT          " Abbrev. of messages (avoids 'hit enter')
     set viewoptions=folds,options,cursor,unix,slash " Better Unix / Windows compatibility
     set virtualedit=onemore             " Allow for cursor beyond last character
