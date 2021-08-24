@@ -41,13 +41,13 @@ Plug 'wfxr/minimap.vim', { 'on': [] }
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'mhinz/vim-startify'
-Plug 'scrooloose/nerdtree', {'on': ['NERDTreeToggle', 'NERDTreeFind']}
+Plug 'preservim/nerdtree', {'on': ['NERDTreeToggle', 'NERDTreeFind']}
 Plug 'ryanoasis/vim-devicons'
 Plug 'posva/vim-vue', {'for': ['vue']}
 Plug 'tpope/vim-fugitive'
 Plug 'iamcco/markdown-preview.nvim', {'do': 'cd app & yarn install', 'for': [ 'markdown', 'md']}
 Plug 'leafgarland/typescript-vim', {'for': ['typescript']}
-Plug 'scrooloose/nerdcommenter'
+Plug 'preservim/nerdcommenter'
 Plug 'easymotion/vim-easymotion'
 Plug 'sheerun/vim-polyglot'
 Plug 'Chiel92/vim-autoformat'
@@ -59,6 +59,7 @@ Plug 'luochen1990/rainbow'
 " Plug 'rust-lang/rust.vim'
 Plug 'dart-lang/dart-vim-plugin'
 Plug 'thosakwe/vim-flutter'
+Plug 'akinsho/bufferline.nvim'
 
 " Plug 'maxmellon/vim-jsx-pretty', {'for': [ 'javascript', 'javascript.jsx', 'typescript', 'typescript.tsx']}
 
@@ -75,7 +76,7 @@ let g:coc_global_extensions = [
         \ 'coc-translator',
         \]
 
-let g:python3_host_prog = '/usr/local/bin/python3.9'
+let g:python3_host_prog = '/usr/local/bin/python3'
 
 " Initialize plugin system
 call plug#end()
@@ -92,6 +93,10 @@ for s:item in s:source_list
   endfor
 
 endfor
+
+lua << EOF
+require("bufferline").setup{}
+EOF
 
 unlet s:script_cwd
 unlet s:source_list
