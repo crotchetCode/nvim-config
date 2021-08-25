@@ -169,8 +169,8 @@
       nmap <leader>q <Esc>:q!<cr>
     " }
     " Coc-todo-list {
-      nmap <leader>c :CocCommand todolist.create<cr>
-      nmap <leader>d :CocCommand todolist.clearRemind<cr>
+      " nmap <leader>c :CocCommand todolist.create<cr>
+      " nmap <leader>d :CocCommand todolist.clearRemind<cr>
     " }
     " Coc-translator {
       nmap <leader>t <Plug>(coc-translator-p)
