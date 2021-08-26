@@ -59,6 +59,7 @@ Plug 'luochen1990/rainbow'
 " Plug 'rust-lang/rust.vim'
 Plug 'dart-lang/dart-vim-plugin'
 Plug 'thosakwe/vim-flutter'
+Plug 'kyazdani42/nvim-web-devicons' " Recommended (for coloured icons)
 Plug 'akinsho/bufferline.nvim'
 
 " Plug 'maxmellon/vim-jsx-pretty', {'for': [ 'javascript', 'javascript.jsx', 'typescript', 'typescript.tsx']}

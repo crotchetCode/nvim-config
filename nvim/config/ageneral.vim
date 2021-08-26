@@ -162,6 +162,7 @@
       nmap <C-d> :bd<cr>
       map <C-d> :bd<cr>
       vmap <C-d> :bd<cr>
+      nmap <silent> gb :BufferLinePick<CR>
     " }
     " Save && Quit {
       imap <leader>s <Esc>:w<cr>
