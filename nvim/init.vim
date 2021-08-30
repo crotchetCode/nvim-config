@@ -77,7 +77,7 @@ let g:coc_global_extensions = [
         \ 'coc-translator',
         \]
 
-let g:python3_host_prog = '/usr/local/bin/python3'
+let g:python3_host_prog = '/usr/local/bin/python3.9'
 
 " Initialize plugin system
 call plug#end()

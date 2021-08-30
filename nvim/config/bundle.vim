@@ -415,6 +415,8 @@
   let g:Lf_WindowPosition = 'popup'
   let g:Lf_ShortcutF = '<C-P>'
   let g:Lf_WorkingDirectoryMode = 'Ac'
+  let g:Lf_UseMemoryCache = 0
+  let g:Lf_UseCache = 0
   " let g:Lf_WorkingDirectory = finddir('.git', '.;')
 " }
 " Plugin fugitive {
