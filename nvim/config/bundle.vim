@@ -402,28 +402,28 @@
 
 " Plugin LeaderF {
   " search word under cursor, the pattern is treated as regex, and enter normal mode directly
-  noremap <leader>f :<C-U><C-R>=printf("Leaderf! rg -e %s ", expand("<cword>"))<CR>
+  " noremap <leader>f :<C-U><C-R>=printf("Leaderf! rg -e %s ", expand("<cword>"))<CR>
   " search word under cursor, the pattern is treated as regex,
   " append the result to previous search results.
-  noremap <leader>g :<C-U><C-R>=printf("Leaderf! rg --append -e %s ", expand("<cword>"))<CR>
+  " noremap <leader>g :<C-U><C-R>=printf("Leaderf! rg --append -e %s ", expand("<cword>"))<CR>
   " search word under cursor literally only in current buffer
-  noremap <leader>b :<C-U><C-R>=printf("Leaderf! rg -F --current-buffer -e %s ", expand("<cword>"))<CR>
+  " noremap <leader>b :<C-U><C-R>=printf("Leaderf! rg -F --current-buffer -e %s ", expand("<cword>"))<CR>
   " search visually selected text literally, don't quit LeaderF after accepting an entry
-  xnoremap gf :<C-U><C-R>=printf("Leaderf! rg -F --stayOpen -e %s ", leaderf#Rg#visual())<CR>
+  " xnoremap gf :<C-U><C-R>=printf("Leaderf! rg -F --stayOpen -e %s ", leaderf#Rg#visual())<CR>
   " recall last search. If the result window is closed, reopen it.
-  noremap go :<C-U>Leaderf! rg --stayOpen --recall<CR>
-  let g:Lf_WindowPosition = 'popup'
-  let g:Lf_ShortcutF = '<C-P>'
-  let g:Lf_WorkingDirectoryMode = 'Ac'
-  let g:Lf_UseMemoryCache = 0
-  let g:Lf_UseCache = 0
+  " noremap go :<C-U>Leaderf! rg --stayOpen --recall<CR>
+  " let g:Lf_WindowPosition = 'popup'
+  " let g:Lf_ShortcutF = '<C-P>'
+  " let g:Lf_WorkingDirectoryMode = 'Ac'
+  " let g:Lf_UseMemoryCache = 0
+  " let g:Lf_UseCache = 0
   " let g:Lf_WorkingDirectory = finddir('.git', '.;')
 " }
 " Plugin fugitive {
-  nnoremap <silent> <leader>gs :Gstatus<CR>
-  nnoremap <silent> <leader>gd :Gdiff<CR>
-  nnoremap <silent> <leader>gb :Gblame<CR>
-  nnoremap <silent> <leader>gl :Glog<CR>
+  " nnoremap <silent> <leader>gs :Gstatus<CR>
+  " nnoremap <silent> <leader>gd :Gdiff<CR>
+  " nnoremap <silent> <leader>gb :Gblame<CR>
+  " nnoremap <silent> <leader>gl :Glog<CR>
 " }
 
 " Plugin vim-jsdoc {
@@ -501,4 +501,24 @@
   let g:NERDTreeExactMatchHighlightColor['.gitignore'] = s:git_orange " sets the color for .gitignore files
   let g:NERDTreeHighlightFolders = 1 " enables folder icon highlighting using exact match
   let g:NERDTreeHighlightFoldersFullName = 1 " highlights the folder name
+" }
+"
+" Plugins vim-clap {
+  let g:clap_multi_selection_warning_silent=1
+  nnoremap <silent> <leader>gb :Clap bcommits<CR>
+  nnoremap <silent> <leader>gc :Clap commits<CR>
+  nnoremap <silent> <leader>gd :Clap git_diff_files<CR>
+  nnoremap <silent> <leader>f :Clap grep2<CR>
+  nnoremap <silent> <leader>ff :Clap grep2 ++query=<cword><CR>
+  vnoremap <silent> <leader>f :Clap grep2 ++query=@visual<CR>
+  nnoremap <silent> <C-p> :Clap files<CR>
+  " nnoremap <silent> <leader>gs :Gstatus<CR>
+  " nnoremap <silent> <leader>gd :Gdiff<CR>
+  " nnoremap <silent> <leader>gb :Gblame<CR>
+  " nnoremap <silent> <leader>gl :Glog<CR>
+" }
+"
+" Plugins dashboard-nvim {
+  let g:indentLine_fileTypeExclude = ['dashboard']
+  autocmd FileType dashboard set showtabline=0 | autocmd WinLeave <buffer> set showtabline=2
 " }

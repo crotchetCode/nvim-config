@@ -12,7 +12,7 @@ augroup END
 function! Handlers(_)
   " 0. before load
   " 1. load plugins
-  call plug#load('vim-startify', 'vim-nerdtree-syntax-highlight', 'vim-devicons', 'nerdtree', 'vim-airline', 'vim-airline-themes', 'vim-fugitive', 'LeaderF', 'nerdcommenter', 'minimap.vim')
+  call plug#load('dashboard-nvim', 'vim-nerdtree-syntax-highlight', 'vim-devicons', 'nerdtree', 'vim-airline', 'vim-airline-themes', 'vim-clap', 'nerdcommenter', 'minimap.vim')
 
   " execute("Minimap")
 
@@ -27,9 +27,9 @@ endfunction
 " Shorthand notation; fetches https://github.com/junegunn/vim-easy-align
 " Plug 'NLKNguyen/papercolor-theme'
 " Plug 'iCyMind/NeoSolarized'
-Plug 'morhetz/gruvbox'
+" Plug 'morhetz/gruvbox'
+Plug 'lifepillar/vim-gruvbox8'
 " Plug 'liuchengxu/vista.vim'
-" Plug 'taigacute/gruvbox9'
 " Plug 'altercation/vim-colors-solarized'
 " Plug 'ayu-theme/ayu-vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -40,11 +40,12 @@ Plug 'Yggdroot/indentLine'
 Plug 'wfxr/minimap.vim', { 'on': [] }
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'mhinz/vim-startify'
+Plug 'glepnir/dashboard-nvim'
+" Plug 'mhinz/vim-startify'
 Plug 'preservim/nerdtree', {'on': ['NERDTreeToggle', 'NERDTreeFind']}
 Plug 'ryanoasis/vim-devicons'
 Plug 'posva/vim-vue', {'for': ['vue']}
-Plug 'tpope/vim-fugitive'
+" Plug 'tpope/vim-fugitive'
 Plug 'iamcco/markdown-preview.nvim', {'do': 'cd app & yarn install', 'for': [ 'markdown', 'md']}
 Plug 'leafgarland/typescript-vim', {'for': ['typescript']}
 Plug 'preservim/nerdcommenter'
@@ -54,8 +55,9 @@ Plug 'Chiel92/vim-autoformat'
 Plug 'jremmen/vim-ripgrep'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plug 'heavenshell/vim-jsdoc', {'for': ['javascript', 'javascript.jsx','typescript'], 'do': 'make install'}
-Plug 'Yggdroot/LeaderF', {'do': './install.sh'}
+" Plug 'Yggdroot/LeaderF', {'do': './install.sh'}
 Plug 'luochen1990/rainbow'
+Plug 'liuchengxu/vim-clap', { 'do': { -> clap#installer#force_download() } }
 " Plug 'rust-lang/rust.vim'
 Plug 'dart-lang/dart-vim-plugin'
 Plug 'thosakwe/vim-flutter'
