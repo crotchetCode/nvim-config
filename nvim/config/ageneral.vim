@@ -78,7 +78,14 @@
     let g:gruvbox_termcolors='256'
     let g:gruvbox_contrast_dark='hard'
     let g:rainbow_active = 1
-    colorscheme gruvbox8
+    let g:gruvbox_material_background = 'hard'
+    let g:gruvbox_material_enable_bold = 1
+    let g:gruvbox_material_enable_italic = 1
+    let my_colorschemes = ['nightfly', 'gruvbox-material']
+    " execute 'colorscheme' my_colorschemes[rand() % len(my_colorschemes)]
+    " execute 'colorscheme' my_colorschemes[rand() % (len(my_colorschemes) - 1 ) ]
+    " colorscheme nightfly
+    colorscheme gruvbox-material
     set cursorline
     set cursorcolumn
     highlight clear SignColumn      " SignColumn should match background

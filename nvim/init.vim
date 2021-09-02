@@ -27,8 +27,10 @@ endfunction
 " Shorthand notation; fetches https://github.com/junegunn/vim-easy-align
 " Plug 'NLKNguyen/papercolor-theme'
 " Plug 'iCyMind/NeoSolarized'
-" Plug 'morhetz/gruvbox'
+Plug 'morhetz/gruvbox'
 Plug 'lifepillar/vim-gruvbox8'
+Plug 'bluz71/vim-nightfly-guicolors'
+Plug 'sainnhe/gruvbox-material'
 " Plug 'liuchengxu/vista.vim'
 " Plug 'altercation/vim-colors-solarized'
 " Plug 'ayu-theme/ayu-vim'
