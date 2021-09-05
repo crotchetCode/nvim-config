@@ -29,6 +29,7 @@ endfunction
 " Plug 'iCyMind/NeoSolarized'
 Plug 'morhetz/gruvbox'
 Plug 'lifepillar/vim-gruvbox8'
+Plug 'joshdick/onedark.vim'
 Plug 'bluz71/vim-nightfly-guicolors'
 Plug 'sainnhe/gruvbox-material'
 " Plug 'liuchengxu/vista.vim'

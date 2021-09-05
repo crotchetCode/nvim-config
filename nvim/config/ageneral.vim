@@ -21,6 +21,12 @@
         endif
     endif
 
+    " 随机函数
+    function! RandInt(Low, High) abort
+        let l:milisec = str2nr(matchstr(reltimestr(reltime()), '\v\.\zs\d+'))
+        return l:milisec % (a:High - a:Low + 1) + a:Low
+    endfunction
+
     " 当打开缓冲区的时候，自动切换目录 
     " autocmd BufEnter * if bufname("") !~ "^\[A-Za-z0-9\]*://" | lcd %:p:h | endif
     set shortmess+=filmnrxoOtT          " Abbrev. of messages (avoids 'hit enter')
@@ -81,11 +87,10 @@
     let g:gruvbox_material_background = 'hard'
     let g:gruvbox_material_enable_bold = 1
     let g:gruvbox_material_enable_italic = 1
-    let my_colorschemes = ['nightfly', 'gruvbox-material']
-    " execute 'colorscheme' my_colorschemes[rand() % len(my_colorschemes)]
-    " execute 'colorscheme' my_colorschemes[rand() % (len(my_colorschemes) - 1 ) ]
-    " colorscheme nightfly
-    colorscheme gruvbox-material
+    let my_colorschemes = ["nightfly", "gruvbox-material", "onedark"]
+    execute "colorscheme" my_colorschemes[RandInt(0, 2)]
+    " colorscheme onedark
+    " colorscheme gruvbox-material
     set cursorline
     set cursorcolumn
     highlight clear SignColumn      " SignColumn should match background
@@ -175,6 +180,7 @@
       imap <leader>s <Esc>:w<cr>
       nmap <leader>s <Esc>:w<cr>
       nmap <leader>q <Esc>:q!<cr>
+      vmap <leader>q <Esc>:q!<cr>
     " }
     " Coc-todo-list {
       " nmap <leader>c :CocCommand todolist.create<cr>
