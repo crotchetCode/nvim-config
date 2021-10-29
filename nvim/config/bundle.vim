@@ -420,10 +420,10 @@
   " let g:Lf_WorkingDirectory = finddir('.git', '.;')
 " }
 " Plugin fugitive {
-  " nnoremap <silent> <leader>gs :Gstatus<CR>
-  " nnoremap <silent> <leader>gd :Gdiff<CR>
-  " nnoremap <silent> <leader>gb :Gblame<CR>
-  " nnoremap <silent> <leader>gl :Glog<CR>
+  nnoremap <silent> <leader>gs :Git<CR>
+  nnoremap <silent> <leader>gd :Gdiff<CR>
+  nnoremap <silent> <leader>gb :Git blame<CR>
+  nnoremap <silent> <leader>gl :Gclog<CR>
 " }
 
 " Plugin vim-jsdoc {
@@ -505,20 +505,22 @@
 "
 " Plugins vim-clap {
   let g:clap_multi_selection_warning_silent=1
-  nnoremap <silent> <leader>gb :Clap bcommits<CR>
-  nnoremap <silent> <leader>gc :Clap commits<CR>
-  nnoremap <silent> <leader>gd :Clap git_diff_files<CR>
+  " nnoremap <silent> <leader>gb :Clap bcommits<CR>
+  " nnoremap <silent> <leader>gc :Clap commits<CR>
+  " nnoremap <silent> <leader>gd :Clap git_diff_files<CR>
   nnoremap <silent> <leader>f :Clap grep2<CR>
   nnoremap <silent> <leader>ff :Clap grep2 ++query=<cword><CR>
   vnoremap <silent> <leader>f :Clap grep2 ++query=@visual<CR>
   nnoremap <silent> <C-p> :Clap files<CR>
-  " nnoremap <silent> <leader>gs :Gstatus<CR>
-  " nnoremap <silent> <leader>gd :Gdiff<CR>
-  " nnoremap <silent> <leader>gb :Gblame<CR>
-  " nnoremap <silent> <leader>gl :Glog<CR>
 " }
 "
 " Plugins dashboard-nvim {
   let g:indentLine_fileTypeExclude = ['dashboard']
   autocmd FileType dashboard set showtabline=0 | autocmd WinLeave <buffer> set showtabline=2
+" }
+" Plugins vim-svelte {
+  let g:vim_svelte_plugin_load_full_syntax = 1
+  let g:vim_svelte_plugin_use_typescript = 1
+  let g:vim_svelte_plugin_use_less = 1
+  let g:vim_svelte_plugin_use_sass = 1
 " }

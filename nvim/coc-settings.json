@@ -8,7 +8,8 @@
     "rust",
     "typescriptreact",
     "javascriptreact",
-    "typescript.tsx"
+    "typescript.tsx",
+    "svelte"
   ],
   "coc.preferences.bracketEnterImprove": true,
   "coc.preferences.rootPatterns": [
@@ -94,5 +95,6 @@
       "filetypes": ["sh"],
       "ignoredRootPaths": ["~"]
     }
-  }
+  },
+  "svelte.enable-ts-plugin": true
 }

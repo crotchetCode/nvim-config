@@ -32,6 +32,7 @@ Plug 'lifepillar/vim-gruvbox8'
 Plug 'joshdick/onedark.vim'
 Plug 'bluz71/vim-nightfly-guicolors'
 Plug 'sainnhe/gruvbox-material'
+Plug 'NLKNguyen/papercolor-theme'
 " Plug 'liuchengxu/vista.vim'
 " Plug 'altercation/vim-colors-solarized'
 " Plug 'ayu-theme/ayu-vim'
@@ -48,7 +49,7 @@ Plug 'glepnir/dashboard-nvim'
 Plug 'preservim/nerdtree', {'on': ['NERDTreeToggle', 'NERDTreeFind']}
 Plug 'ryanoasis/vim-devicons'
 Plug 'posva/vim-vue', {'for': ['vue']}
-" Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-fugitive'
 Plug 'iamcco/markdown-preview.nvim', {'do': 'cd app & yarn install', 'for': [ 'markdown', 'md']}
 Plug 'leafgarland/typescript-vim', {'for': ['typescript']}
 Plug 'preservim/nerdcommenter'
@@ -66,6 +67,8 @@ Plug 'dart-lang/dart-vim-plugin'
 Plug 'thosakwe/vim-flutter'
 Plug 'kyazdani42/nvim-web-devicons' " Recommended (for coloured icons)
 Plug 'akinsho/bufferline.nvim'
+Plug 'leafOfTree/vim-svelte-plugin'
+
 
 " Plug 'maxmellon/vim-jsx-pretty', {'for': [ 'javascript', 'javascript.jsx', 'typescript', 'typescript.tsx']}
 
@@ -76,7 +79,7 @@ let g:coc_global_extensions = [
         \ 'coc-git', 'coc-lists', 'coc-word', 'coc-dictionary', 'coc-emoji', 'coc-highlight', 'coc-pairs', 'coc-yank',
         \ 'coc-vimlsp', 'coc-tsserver', 'coc-vetur', 'coc-html', 'coc-css', 'coc-json', 'coc-yaml', 'coc-flutter',
         \ 'coc-prettier', 'coc-jest',
-        \ 'coc-stylelintplus',
+        \ 'coc-stylelintplus', 'coc-svelte',
         \ 'coc-snippets', 'coc-rust-analyzer',
         \ 'https://github.com/xabikos/vscode-javascript',
         \ 'coc-translator',
@@ -101,7 +104,15 @@ for s:item in s:source_list
 endfor
 
 lua << EOF
-require("bufferline").setup{}
+require("bufferline").setup{
+    \ options = {
+    \   diagnostics = "coc",
+    \   diagnostics_update_in_insert = false,
+    \   diagnostics_indicator = function(count, level, diagnostics_dict, context)
+    \     return "("..count..")"
+    \   end,
+    \ }
+\ }
 EOF
 
 unlet s:script_cwd
