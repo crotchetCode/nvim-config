@@ -85,10 +85,11 @@
     let g:gruvbox_contrast_dark='hard'
     let g:rainbow_active = 1
     let g:gruvbox_material_background = 'hard'
+    let g:everforest_background = 'hard'
     let g:gruvbox_material_enable_bold = 1
     let g:gruvbox_material_enable_italic = 1
-    let my_colorschemes = ["nightfly", "gruvbox-material", "onedark", "PaperColor"]
-    execute "colorscheme" my_colorschemes[RandInt(0, 3)]
+    let my_colorschemes = ["nightfly", "spaceduck", "gruvbox-material", "onedark", "PaperColor", "everforest"]
+    execute "colorscheme" my_colorschemes[RandInt(0, 5)]
     " colorscheme onedark
     " colorscheme gruvbox-material
     set cursorline

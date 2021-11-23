@@ -28,6 +28,8 @@ endfunction
 " Plug 'NLKNguyen/papercolor-theme'
 " Plug 'iCyMind/NeoSolarized'
 Plug 'morhetz/gruvbox'
+Plug 'sainnhe/everforest'
+Plug 'pineapplegiant/spaceduck', { 'branch': 'main' }
 Plug 'lifepillar/vim-gruvbox8'
 Plug 'joshdick/onedark.vim'
 Plug 'bluz71/vim-nightfly-guicolors'
