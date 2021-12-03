@@ -96,5 +96,10 @@
       "ignoredRootPaths": ["~"]
     }
   },
-  "svelte.enable-ts-plugin": true
+  "svelte.enable-ts-plugin": true,
+  "explorer.icon.enableNerdfont": true,
+  "explorer.git.icon.status.added": "✚",
+  "explorer.git.icon.status.deleted": "✖",
+  "explorer.git.icon.status.renamed": "➜",
+  "explorer.git.icon.status.untracked": "✗"
 }

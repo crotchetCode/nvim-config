@@ -223,6 +223,7 @@
   let g:indentLine_setColors = 0
   let g:indentLine_char = '┆'
   let g:indentLine_conceallevel = 2
+  let g:indentLine_fileTypeExclude = ['dashboard', 'coc-explorer']
 "}
 
 " Plugin ense-analysis/ale{
@@ -350,17 +351,17 @@
 " }
 
 " Plugin nerdtree {
-  map <C-e> :NERDTreeToggle<CR>
-  map <leader>e  :NERDTreeFind<CR>
-  nmap <leader>e  :NERDTreeFind<CR>
-  let NERDTreeShowBookmarks=1
-  let NERDTreeIgnore=['\.py[cd]$', 'node_modules', '\~$', '\.swo$', '\.swp$', '^\.git$', '^\.hg$', '^\.svn$', '\.bzr$']
-  let NERDTreeChDirMode=0
-  let NERDTreeQuitOnOpen=1
-  let NERDTreeMouseMode=2
-  let NERDTreeShowHidden=1
-  let NERDTreeKeepTreeInNewTab=1
-  let g:nerdtree_tabs_open_on_gui_startup=0
+  " map <C-e> :NERDTreeToggle<CR>
+  " map <leader>e  :NERDTreeFind<CR>
+  " nmap <leader>e  :NERDTreeFind<CR>
+  " let NERDTreeShowBookmarks=1
+  " let NERDTreeIgnore=['\.py[cd]$', 'node_modules', '\~$', '\.swo$', '\.swp$', '^\.git$', '^\.hg$', '^\.svn$', '\.bzr$']
+  " let NERDTreeChDirMode=0
+  " let NERDTreeQuitOnOpen=1
+  " let NERDTreeMouseMode=2
+  " let NERDTreeShowHidden=1
+  " let NERDTreeKeepTreeInNewTab=1
+  " let g:nerdtree_tabs_open_on_gui_startup=0
 " }
 
 " Plugin devicons {
@@ -376,19 +377,19 @@
 " }
 "
 " Plugin Xuyuanp/nerdtree-git-plugin {
-  let g:NERDTreeGitStatusIndicatorMapCustom = {
-                \ 'Modified'  :'✹',
-                \ 'Staged'    :'✚',
-                \ 'Untracked' :'✭',
-                \ 'Renamed'   :'➜',
-                \ 'Unmerged'  :'═',
-                \ 'Deleted'   :'✖',
-                \ 'Dirty'     :'✗',
-                \ 'Ignored'   :'☒',
-                \ 'Clean'     :'✔︎',
-                \ 'Unknown'   :'?',
-                \ }
-" }
+  " let g:NERDTreeGitStatusIndicatorMapCustom = {
+                " \ 'Modified'  :'✹',
+                " \ 'Staged'    :'✚',
+                " \ 'Untracked' :'✗',
+                " \ 'Renamed'   :'➜',
+                " \ 'Unmerged'  :'═',
+                " \ 'Deleted'   :'✖',
+                " \ 'Dirty'     :'✭',
+                " \ 'Ignored'   :'☒',
+                " \ 'Clean'     :'✔︎',
+                " \ 'Unknown'   :'?',
+                " \ }
+" " }
 
 " Plugin nerdcommenter }
   let g:NERDSpaceDelims = 1
@@ -494,13 +495,13 @@
 "}
 
 " Plugins vim-nerdtree-syntax-highlight {
-  let s:git_orange = 'F54D27'
-  let g:NERDTreeExtensionHighlightColor = {}
-  let g:NERDTreeExtensionHighlightColor['vue'] = '42b883'
-  let g:NERDTreeExactMatchHighlightColor = {} " this line is needed to avoid error
-  let g:NERDTreeExactMatchHighlightColor['.gitignore'] = s:git_orange " sets the color for .gitignore files
-  let g:NERDTreeHighlightFolders = 1 " enables folder icon highlighting using exact match
-  let g:NERDTreeHighlightFoldersFullName = 1 " highlights the folder name
+  " let s:git_orange = 'F54D27'
+  " let g:NERDTreeExtensionHighlightColor = {}
+  " let g:NERDTreeExtensionHighlightColor['vue'] = '42b883'
+  " let g:NERDTreeExactMatchHighlightColor = {} " this line is needed to avoid error
+  " let g:NERDTreeExactMatchHighlightColor['.gitignore'] = s:git_orange " sets the color for .gitignore files
+  " let g:NERDTreeHighlightFolders = 1 " enables folder icon highlighting using exact match
+  " let g:NERDTreeHighlightFoldersFullName = 1 " highlights the folder name
 " }
 "
 " Plugins vim-clap {
@@ -515,7 +516,6 @@
 " }
 "
 " Plugins dashboard-nvim {
-  let g:indentLine_fileTypeExclude = ['dashboard']
   autocmd FileType dashboard set showtabline=0 | autocmd WinLeave <buffer> set showtabline=2
 " }
 " Plugins vim-svelte {
@@ -523,4 +523,57 @@
   let g:vim_svelte_plugin_use_typescript = 1
   let g:vim_svelte_plugin_use_less = 1
   let g:vim_svelte_plugin_use_sass = 1
+" }
+"
+" Plugins coc-explorer{
+  let g:coc_explorer_global_presets = {
+  \   '.vim': {
+  \     'root-uri': '~/.vim',
+  \   },
+  \   'cocConfig': {
+  \      'root-uri': '~/.config/coc',
+  \   },
+  \   'tab': {
+  \     'position': 'tab',
+  \     'quit-on-open': v:true,
+  \   },
+  \   'tab:$': {
+  \     'position': 'tab:$',
+  \     'quit-on-open': v:true,
+  \   },
+  \   'floating': {
+  \     'position': 'floating',
+  \     'open-action-strategy': 'sourceWindow',
+  \   },
+  \   'floatingTop': {
+  \     'position': 'floating',
+  \     'floating-position': 'center-top',
+  \     'open-action-strategy': 'sourceWindow',
+  \   },
+  \   'floatingLeftside': {
+  \     'position': 'floating',
+  \     'floating-position': 'left-center',
+  \     'floating-width': 50,
+  \     'open-action-strategy': 'sourceWindow',
+  \   },
+  \   'floatingRightside': {
+  \     'position': 'floating',
+  \     'floating-position': 'right-center',
+  \     'floating-width': 50,
+  \     'open-action-strategy': 'sourceWindow',
+  \   },
+  \   'simplify': {
+  \     'file-child-template': '[selection | clip | 1] [indent][icon | 1] [filename omitCenter 1]'
+  \   },
+  \   'buffer': {
+  \     'sources': [{'name': 'buffer', 'expand': v:true}]
+  \   },
+  \ }
+
+  " Use preset argument to open it
+  nmap <leader>e <Cmd>CocCommand explorer --preset floatingRightside<CR>
+  nmap <C-e> <Cmd>CocCommand explorer<CR>
+
+  " List all presets
+  nmap <leader>el <Cmd>CocList explPresets<CR>
 " }

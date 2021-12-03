@@ -12,7 +12,8 @@ augroup END
 function! Handlers(_)
   " 0. before load
   " 1. load plugins
-  call plug#load('dashboard-nvim', 'vim-nerdtree-syntax-highlight', 'vim-devicons', 'nerdtree', 'vim-airline', 'vim-airline-themes', 'vim-clap', 'nerdcommenter', 'minimap.vim')
+  call plug#load('dashboard-nvim', 'vim-devicons', 'vim-airline', 'vim-airline-themes', 'vim-clap', 'nerdcommenter', 'minimap.vim')
+  " call plug#load('dashboard-nvim', 'vim-nerdtree-syntax-highlight', 'vim-devicons', 'nerdtree', 'vim-airline', 'vim-airline-themes', 'vim-clap', 'nerdcommenter', 'minimap.vim')
 
   " execute("Minimap")
 
@@ -28,6 +29,7 @@ endfunction
 " Plug 'NLKNguyen/papercolor-theme'
 " Plug 'iCyMind/NeoSolarized'
 Plug 'morhetz/gruvbox'
+Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'sainnhe/everforest'
 Plug 'pineapplegiant/spaceduck', { 'branch': 'main' }
 Plug 'lifepillar/vim-gruvbox8'
@@ -40,7 +42,7 @@ Plug 'NLKNguyen/papercolor-theme'
 " Plug 'ayu-theme/ayu-vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'dense-analysis/ale'
-Plug 'Xuyuanp/nerdtree-git-plugin'
+" Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'Yggdroot/indentLine'
 " Plug 'nathanaelkane/vim-indent-guides'
 Plug 'wfxr/minimap.vim', { 'on': [] }
@@ -48,7 +50,7 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'glepnir/dashboard-nvim'
 " Plug 'mhinz/vim-startify'
-Plug 'preservim/nerdtree', {'on': ['NERDTreeToggle', 'NERDTreeFind']}
+" Plug 'preservim/nerdtree', {'on': ['NERDTreeToggle', 'NERDTreeFind']}
 Plug 'ryanoasis/vim-devicons'
 Plug 'posva/vim-vue', {'for': ['vue']}
 Plug 'tpope/vim-fugitive'
@@ -59,7 +61,7 @@ Plug 'easymotion/vim-easymotion'
 Plug 'sheerun/vim-polyglot'
 Plug 'Chiel92/vim-autoformat'
 Plug 'jremmen/vim-ripgrep'
-Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
+" Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plug 'heavenshell/vim-jsdoc', {'for': ['javascript', 'javascript.jsx','typescript'], 'do': 'make install'}
 " Plug 'Yggdroot/LeaderF', {'do': './install.sh'}
 Plug 'luochen1990/rainbow'
@@ -84,7 +86,7 @@ let g:coc_global_extensions = [
         \ 'coc-stylelintplus', 'coc-svelte',
         \ 'coc-snippets', 'coc-rust-analyzer',
         \ 'https://github.com/xabikos/vscode-javascript',
-        \ 'coc-translator',
+        \ 'coc-translator', 'coc-explorer'
         \]
 
 let g:python3_host_prog = '/usr/local/bin/python3.9'
