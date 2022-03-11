@@ -1,6 +1,12 @@
 " Specify a directory for plugins
 " - For Neovim: ~/.local/share/nvim/plugged
 " - Avoid using standard Vim directory names like 'plugin'
+if exists('g:vscode')
+    " VSCode extension
+else
+    " ordinary neovim
+endif
+
 call plug#begin('~/.config/nvim/plugged')
 
 augroup loadPlugin
@@ -29,6 +35,7 @@ endfunction
 " Plug 'NLKNguyen/papercolor-theme'
 " Plug 'iCyMind/NeoSolarized'
 Plug 'morhetz/gruvbox'
+Plug 'baliestri/aura-theme', { 'branch': 'feat/neovim-port', 'rtp': 'packages/neovim' }
 Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'sainnhe/everforest'
 Plug 'pineapplegiant/spaceduck', { 'branch': 'main' }

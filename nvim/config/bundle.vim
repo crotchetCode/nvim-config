@@ -506,6 +506,7 @@
 "
 " Plugins vim-clap {
   let g:clap_multi_selection_warning_silent=1
+  let g:clap_project_root_marker = ['.root', '.git', '.git/']
   " nnoremap <silent> <leader>gb :Clap bcommits<CR>
   " nnoremap <silent> <leader>gc :Clap commits<CR>
   " nnoremap <silent> <leader>gd :Clap git_diff_files<CR>

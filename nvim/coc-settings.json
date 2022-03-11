@@ -1,7 +1,7 @@
 {
   "coc.preferences.hoverTarget": "float",
   "coc.preferences.currentFunctionSymbolAutoUpdate": true,
-  "coc.preferences.formatOnType": false,
+  "coc.preferences.formatOnType": true,
   "coc.preferences.formatOnSaveFiletypes": [
     "javascript",
     "typescript",
@@ -98,11 +98,11 @@
   },
   "svelte.enable-ts-plugin": true,
   "explorer.icon.enableNerdfont": true,
-  "explorer.git.icon.status.modified": "M",
-  "explorer.git.icon.status.added": "🅰",
-  "explorer.git.icon.status.deleted": "♻",
-  "explorer.git.icon.status.renamed": "➜",
+  "explorer.git.icon.status.modified": "✏",
+  "explorer.git.icon.status.added": "✓",
+  "explorer.git.icon.status.deleted": "✗",
+  "explorer.git.icon.status.renamed": "➢",
   "explorer.git.icon.status.ignored": "!",
-  "explorer.git.icon.status.mixed": "",
-  "explorer.git.icon.status.untracked": "✖"
+  "explorer.git.icon.status.mixed": "⌘",
+  "explorer.git.icon.status.untracked": "♨"
 }

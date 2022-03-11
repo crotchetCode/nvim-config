@@ -92,6 +92,7 @@
     execute "colorscheme" my_colorschemes[RandInt(0, 6)]
     " colorscheme onedark
     " colorscheme gruvbox-material
+    " colorscheme aura-dark-soft-text " Dark Soft Text palette
     set cursorline
     set cursorcolumn
     highlight clear SignColumn      " SignColumn should match background
